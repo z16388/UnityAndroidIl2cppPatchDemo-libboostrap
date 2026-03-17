@@ -42,8 +42,6 @@ LOCAL_MODULE := test_pthread_mutex
 
 LOCAL_MODULE_FILENAME := test_pthread_mutex
 
-cmd-strip = $(TOOLCHAIN_PREFIX)strip --strip-unneeded -x $1
-
 LOCAL_SRC_FILES := unittest/test_mutex.cpp
 
 LOCAL_CFLAGS :=  -g -O0 -fvisibility=hidden -pie -fPIE
@@ -66,8 +64,6 @@ include $(BUILD_EXECUTABLE)
 LOCAL_MODULE := test_ashmem
 
 LOCAL_MODULE_FILENAME := test_ashmem
-
-cmd-strip = $(TOOLCHAIN_PREFIX)strip --strip-unneeded -x $1
 
 LOCAL_SRC_FILES := unittest/test_ashmem.cpp
 
