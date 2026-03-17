@@ -8,8 +8,6 @@ LOCAL_MODULE := bootstrap
 
 LOCAL_MODULE_FILENAME := libbootstrap
 
-cmd-strip = $(TOOLCHAIN_PREFIX)strip --strip-unneeded -x $1
-
 LOCAL_SRC_FILES := \
 	xhook/xhook.c \
     xhook/xh_core.c \
