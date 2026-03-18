@@ -48,6 +48,9 @@ LOCAL_CFLAGS :=  -g -O0 -fvisibility=hidden -pie -fPIE
 LOCAL_CPPFLAGS := -g -O0 -std=c++11 -fvisibility=hidden -pie -fPIE
 
 LOCAL_LDFLAGS += -pie -fPIE
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
+LOCAL_LDFLAGS += -Wl,-z,common-page-size=16384
+
 LOCAL_LDLIBS := -llog -L$(LOCAL_PATH)/../../libs/$(TARGET_ARCH_ABI)
 
 LOCAL_C_INCLUDES  += system/core/include/cutils
